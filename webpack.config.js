@@ -56,7 +56,12 @@ module.exports = {
             }, {
                 loader: "css-loader" // translates CSS into CommonJS
             }, {
-                loader: "sass-loader" // compiles Sass to CSS
+                loader: "sass-loader", // compiles Sass to CSS
+                query: {
+                  includePaths: [
+                    path.resolve(__dirname, './node_modules/foundation-sites/scss')
+                  ]
+                }
             }]
         }
   ]
